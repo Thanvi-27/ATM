@@ -1,0 +1,23 @@
+{
+    "name": "atm-system",
+    "version": "1.0.0",
+    "description": "ATM application with Express backend and modern frontend",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon app.js"
+    },
+    "keywords": [
+        "atm",
+        "banking"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.18.2",
+        "cors": "^2.8.5"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1"
+    }
+}
