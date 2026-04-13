@@ -22,7 +22,7 @@ jobs:
 
     - name: Start Server
       run: |
-        node backend/server.js &
+        node backend/app.js &
         sleep 5
 
     - name: Test API
