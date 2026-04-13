@@ -1,0 +1,30 @@
+name: ATM CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Start Server
+      run: |
+        node backend/server.js &
+        sleep 5
+
+    - name: Test API
+      run: |
+        curl http://localhost:5000/api/balance
